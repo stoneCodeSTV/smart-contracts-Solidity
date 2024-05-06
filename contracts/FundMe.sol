@@ -84,5 +84,13 @@ contract FundMe {
         // The underscore tells the program to run the rest of the code after the condition has been met 
         _;
     }
+
+    receive() external payable {
+        fund();
+     }
+
+     fallback() external payable { 
+        fund();
+     }
 }
 
